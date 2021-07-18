@@ -1,0 +1,106 @@
+# global format
+format = """
+%F{194}  %F{118}ﰣ  %F{142}                                                          $battery
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$ine_break\
+$lua\
+$jobs\
+$time\
+$status\
+$shell\
+$line_break\
+$character"""
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the "❯" symbol in the prompt with "➜           "
+# Replace the "" symbol in the prompt with " ⌧    "
+# The name of the module we are configuring is "character"
+[character]
+success_symbol = "[](bold fg:107)[](bold fg:32)[](bold fg:202)"
+error_symbol   = "[](bold red)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[battery]
+format = "[$symbol$percentage]($style)"
+[[battery.display]]
+threshold = 70
+style = "bold blue"
+[[battery.display]]
+threshold = 90
+style = "bold fg:154"
+[[battery.display]]
+threshold = 100
+style = "bold purple"
+
+[directory]
+home_symbol	 = ''
+truncation_length = 1
+truncation_symbol = ""
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "user: [$user]($style) "
+disabled = true
+show_always = false
+
+# git status
+[git_status]

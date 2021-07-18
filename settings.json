@@ -1,0 +1,32 @@
+{
+  "editor.renderControlCharacters": true,
+  "editor.fontSize": 14,
+  "workbench.colorTheme": "Palenight Italic",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace,\"FiraCode Nerd Font\"",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "\"FuraCode Nerd Font\"",
+  "terminal.integrated.defaultProfile.osx": "@in",
+  "terminal.integrated.profiles.osx": {
+    "zsh": null,
+    "bash": null,
+    "github": {
+      "overrideName": true,
+      "path": "zsh",
+      "args": ["-l"],
+      "icon": "github",
+      "color": "terminal.ansiRed"
+    },
+    "@in": {
+      "overrideName": true,
+      "path": "zsh",
+      "args": ["-l"],
+      "icon": "terminal-bash",
+      "color": "terminal.ansiCyan"
+    }
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.external.osxExec": "Hyper.app",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false
+}

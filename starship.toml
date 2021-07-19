@@ -1,6 +1,7 @@
 # global format
 format = """
-%F{194}  %F{118}ﰣ  %F{142}                                                          $battery
+%F{194}  %F{118}ﰣ  %F{142} 
+$battery\
 $username\
 $hostname\
 $shlvl\
@@ -76,17 +77,17 @@ error_symbol   = "[](bold red)"
 [package]
 disabled = false
 
-[battery]
-format = "[$symbol$percentage]($style)"
-[[battery.display]]
-threshold = 70
-style = "bold blue"
-[[battery.display]]
-threshold = 90
-style = "bold fg:154"
-[[battery.display]]
-threshold = 100
-style = "bold purple"
+# [battery]
+# format = "[$symbol$percentage]($style)"
+# [[battery.display]]
+# threshold = 70
+# style = "bold blue"
+# [[battery.display]]
+# threshold = 90
+# style = "bold fg:154"
+# [[battery.display]]
+# threshold = 100
+# style = "bold purple"
 
 [directory]
 home_symbol	 = ''
